@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: exam
+  name: exam-resource-reader
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "configmaps"]  # Ajoutez ici les ressources auxquelles vous voulez accorder l'accès
+  verbs: ["get", "list", "watch"]
